@@ -141,22 +141,30 @@
                 <h2>Contact me</h2>
             </div>
         </div>
-        <div class="row justify-content-center text-light-emphasis">
+        <div class="row justify-content-center text-light-emphasis ">
             <div class="col-md-6">
-                <form>
+              <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+                <strong>Terima kasih!</strong> Pesan anda sudah kami terima.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+                <form name="contactForm">
                     <div class="mb-3">
                       <label for="name" class="form-label">Nama</label>
-                      <input type="text" class="form-control" id="name" aria-describedby="name">
+                      <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
                     </div>
                     <div class="mb-3">
                       <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="email" aria-describedby="email">
+                      <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
                     </div>
                     <div class="mb-3">
                         <label for="pesan" class="form-label">Pesan</label>
-                        <textarea class="form-control" id="pesan" rows="3"></textarea>
+                        <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
                       </div>
-                    <button type="submit" class="btn btn-dark text-gray-emphasis mb-3">Kirim</button>
+                    <button type="submit" class="btn btn-dark text-gray-emphasis  btn-kirim">Kirim</button>
+                      <div class="spinner-border btn-spiner d-none" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                    </div>
                   </form>
             </div>
         </div>
@@ -176,6 +184,32 @@
 </footer>
 <!-- end footer -->
 
+<script>
+  const btnKirim = document.querySelector('.btn-kirim')
+  const btnLoading = document.querySelector('.btn-spiner')
+  const myAlert = document.querySelector('.my-alert')
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx4dydERRyVek6JzWbGLr5P00SiRVEZMLCRdiHOVMZ_stH3vQjYQg5XkpdnsVA6ezcJ4Q/exec'
+  const form = document.forms['contactForm']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    // ketika tombol diklik
+    // tampilkan tombol loading, hilangkan tombol kirim
+    btnKirim.classList.toggle('d-none');
+    btnLoading.classList.toggle('d-none');
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        // tampilkan tombol kirim
+        // hilangkan tombol loading
+        btnKirim.classList.toggle('d-none');
+        btnLoading.classList.toggle('d-none');
+        myAlert.classList.toggle('d-none');
+        form.reset();
+        console.log('Success!', response)})
+      .catch(error => console.error('Error!', error.message))
+  })
+
+</script>
 <script src="darkMode.js" type="application/javascript"></script>
 
 </body>
