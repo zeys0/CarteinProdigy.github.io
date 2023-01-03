@@ -5,11 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
     crossorigin="anonymous" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Bootstrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+    
     <link rel="stylesheet" href="style.css">
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
   </head>
   <body>
     <!-- Navbar -->
@@ -39,9 +48,9 @@
   <!-- jumbotron -->
   <section class="jumbotron text-center">
     <img src="assets/img/IMG_20220704_215254.jpg" alt="Ada Meteor bang" width="200"  
-    class="rounded-circle img-thumbnail">
+    class="rounded-circle img-thumbnail" >
     <h1 class="display-4">Muhammad Rafli</h1>
-    <p class="lead">Saya adalah seorang bajak laut</p>
+    <p class="lead"></p>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="27303" fill-opacity="1" d="M0,192L30,202.7C60,213,120,235,180,245.3C240,256,300,256,360,224C420,192,480,128,540,122.7C600,117,660,171,720,197.3C780,224,840,224,900,213.3C960,203,1020,181,1080,197.3C1140,213,
         1200,267,1260,282.7C1320,299,1380,277,1410,266.7L1440,256L1440,320L1410,
         320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,
@@ -52,16 +61,18 @@
 
   <!-- about me -->
   <section id="about" style="background-color: black ">
-    <div class="container text-light">
+    <div class="container text-light ">
         <div class="row text-center mb-3">
         <div class="col">
             <h2>About me</h2>
         </div>
     </div>
     <div class="row justify-content-center fs-5 text-center text-light-emphasis">
-        <div class="col-md-4 "><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        <div class="col-md-4 " data-aos="fade-right" data-aos-duration="1000">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
             Culpa quod ratione, ex id atque qui ipsum adipisci nisi molestias dolores.</p></div>
-        <div class="col-md-4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veritatis
+        <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veritatis
              sunt adipisci. Eligendi, numquam voluptatum deleniti officia harum dolore fuga.</p></div>
     </div>
     </div>
@@ -82,7 +93,7 @@
         <h2>My Projects</h2>
     </div>
     <div class="row text-center justify-content-center">
-        <div class="col-md-4 mb-3"> 
+        <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-duration="500"> 
             <div class="card">
                 <img src="assets/img/project (1).jpg" class="card-img-top" alt="project (1)">
                 <div class="card-body">
@@ -90,7 +101,7 @@
                 </div>
               </div>
         </div>
-        <div class="col-md-4 mb-3"> 
+        <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-duration="500" data-aos-delay="150"> 
             <div class="card">
                 <img src="assets/img/project (2).jpg" class="card-img-top" alt="project (1)">
                 <div class="card-body">
@@ -98,7 +109,7 @@
                 </div>
               </div>
         </div>
-        <div class="col-md-4 mb-3"> 
+        <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-duration="500" data-aos-delay="300"> 
             <div class="card">
                 <img src="assets/img/project (3).jpg" class="card-img-top" alt="project (1)">
                 <div class="card-body">
@@ -106,7 +117,7 @@
                 </div>
               </div>
         </div>
-        <div class="col-md-4 mb-3 "> 
+        <div class="col-md-4 mb-3 " data-aos="flip-left" data-aos-duration="500" data-aos-delay="450"> 
             <div class="card">
                 <img src="assets/img/project (4).jpg" class="card-img-top" alt="project (1)">
                 <div class="card-body">
@@ -114,7 +125,7 @@
                 </div>
               </div>
         </div>
-        <div class="col-md-4 mb-3"> 
+        <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-duration="500" data-aos-delay="600"> 
             <div class="card">
                 <img src="assets/img/project (5).jpg" class="card-img-top" alt="project (1)">
                 <div class="card-body">
@@ -133,15 +144,84 @@
   </section>
   <!-- end project -->
 
+  <!-- Gallery -->
+  <section id="gallery" style="background-color: black;">
+    <div class="container">
+      <div class="row text-center mb-3 text-light">
+        <div class="col">
+            <h2>Gallery</h2>
+        </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <a href="">
+              <img src="assets/img/1 (1).jpg" alt="1" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="assets/img/1 (2).jpg" alt="2" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="assets/img/1 (3).jpg" alt="3" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="assets/img/1 (4).jpg" alt="4" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="assets/img/1 (5).jpg" alt="5" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="assets/img/1 (6).jpg" alt="6" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="assets/img/1 (7).jpg" alt="7" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="assets/img/1 (8).jpg" alt="8" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="assets/img/1 (9).jpg" alt="9" class="img-fluid gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="assets/img/1 (10).jpg" alt="10" class="img-fluid gallery-img">
+            </a>
+          </div>
+        </div>
+    </div> 
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFFF52" fill-opacity="1" 
+      d="M0,64L48,101.3C96,139,192,213,288,208C384,203,480,117,576,122.7C672,128,768,224,864,240C960,256,
+      1056,192,1152,176C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,
+      320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+  </section>
+<!-- end Galerry -->
+
 <!-- contact me -->
-<section id="contact" style="background-color: black;">
-    <div class="container text-light">
+<section id="contact" style="background-color: #FFFF52;">
+    <div class="container text-dark">
         <div class="row text-center mb-3">
             <div class="col">
                 <h2>Contact me</h2>
             </div>
         </div>
-        <div class="row justify-content-center text-light-emphasis ">
+        <div class="row justify-content-center text-dark-emphasis ">
             <div class="col-md-6">
               <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
                 <strong>Terima kasih!</strong> Pesan anda sudah kami terima.
@@ -169,7 +249,7 @@
             </div>
         </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFFF52" fill-opacity="1" 
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="black" fill-opacity="1" 
         d="M0,32L48,53.3C96,75,192,117,288,133.3C384,149,480,139,576,117.3C672,96,768,64,864,69.3C960,75,
         1056,117,1152,128C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,
         320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
@@ -177,8 +257,8 @@
 <!-- end contact -->
 
 <!-- footer -->
-<footer class=" text-center pb-5" style="background-color: #FFFF52">
-    <p>Created by <a class="text-black fw-bold" href="https://www.instagram.com/rafli0897/">
+<footer class=" text-center pb-5 " style="background-color: black">
+    <p class="text-light-emphasis">Created by <a class="text-light fw-bold" href="https://www.instagram.com/rafli0897/">
     Cartein Prodigy</a>
     </p>
 </footer>
@@ -211,6 +291,30 @@
 
 </script>
 <script src="darkMode.js" type="application/javascript"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  const galleryImg = document.querySelectorAll('.gallery-img');
+
+  galleryImg.forEach((img, i)=>{
+   img.dataset.aos = 'fade-down';
+   img.dataset.aosDelay = i * 100;
+   img.dataset.aosDuration = 1000;
+  })
+
+  AOS.init({
+    once: true,
+  });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
+<script>
+  gsap.registerPlugin(TextPlugin);
+  gsap.to('.lead', {duration: 2, delay: 1.5, text: 'Bajak Laut | Hokage'})
+  gsap.from('.jumbotron img', {duration: 1, rotateY: 360, opacity: 0, })
+  gsap.from('.navbar', {duration: 1.5, y: '-100%', opacity: 0, ease: 'bounce'})
+  gsap.from('.display-4', {duration: 1, x: -50, opacity: 0, delay: 0.5, ease: 'back'})
+</script>
 
 </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 

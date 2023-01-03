@@ -17,5 +17,12 @@ opacity: 50%;
  background-color:palegreen;
  color: green;
  
+}
 
+.gallery-img{
+width: 100%;
+
+}
+#gallery .row > *{
+    padding: 0;
 }
