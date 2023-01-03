@@ -1,0 +1,21 @@
+.jumbotron{
+    padding-top: 6rem ;
+   background-image: url(assets/img/projects1.gif);
+   background-position:center;
+
+}
+section{
+    padding-top: 5rem;
+}
+.gif{
+
+border-radius: 10px;
+opacity: 50%;
+
+}
+.dark{
+ background-color:palegreen;
+ color: green;
+ 
+
+}
